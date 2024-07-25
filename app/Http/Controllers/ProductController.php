@@ -13,4 +13,11 @@ class ProductController extends Controller
 
         return Inertia::render('Index', ['articles'=>$products] );
     }
+
+
+    function store(){
+        $products = Product::all();
+
+        return Inertia::render('Customers/ProductList', ['articles'=>$products] );
+    }
 }

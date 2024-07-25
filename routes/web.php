@@ -4,8 +4,13 @@ use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::controller(ProductController::class)->group(function () {
 
-    Route::get('/', 'view');
+    Route::controller(ProductController::class)->group(function() { 
 
-});
+            Route::get('/', 'view');
+            Route::get('/store', 'store');
+
+    });
+
+
+
