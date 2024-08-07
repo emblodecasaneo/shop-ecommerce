@@ -106,14 +106,14 @@
                       </div>
                     </div>
                     <div
-                      class="text-justify"
+                      style="text-align: left"
+                      class="text-left"
                       v-for="section in category.sections"
                       :key="section.name"
                     >
                       <p
-                        style="text-align: justify"
                         :id="`${category.id}-${section.id}-heading-mobile`"
-                        class="font-medium text-gray-900"
+                        class="font-medium text-left text-gray-900"
                       >
                         {{ section.name }}
                       </p>
@@ -174,12 +174,6 @@
     </TransitionRoot>
 
     <header class="relative bg-white">
-      <p
-        class="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8"
-      >
-        Get free delivery on orders over $100
-      </p>
-
       <nav aria-label="Top" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="border-b border-gray-200">
           <div class="flex h-16 items-center">
@@ -406,19 +400,15 @@ const navigation = {
             "Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.",
         },
       ],
+
       sections: [
         {
           id: "clothing",
           name: "Clothing",
           items: [
-            { name: "Tops", href: "#" },
-            { name: "Dresses", href: "#" },
+            { name: "Tops", href: "women/tops" },
             { name: "Pants", href: "#" },
-            { name: "Denim", href: "#" },
-            { name: "Sweaters", href: "#" },
             { name: "T-Shirts", href: "#" },
-            { name: "Jackets", href: "#" },
-            { name: "Activewear", href: "#" },
             { name: "Browse All", href: "#" },
           ],
         },
@@ -428,10 +418,7 @@ const navigation = {
           items: [
             { name: "Watches", href: "#" },
             { name: "Wallets", href: "#" },
-            { name: "Bags", href: "#" },
-            { name: "Sunglasses", href: "#" },
             { name: "Hats", href: "#" },
-            { name: "Belts", href: "#" },
           ],
         },
         {
@@ -439,14 +426,12 @@ const navigation = {
           name: "Brands",
           items: [
             { name: "Full Nelson", href: "#" },
-            { name: "My Way", href: "#" },
-            { name: "Re-Arranged", href: "#" },
             { name: "Counterfeit", href: "#" },
-            { name: "Significant Other", href: "#" },
           ],
         },
       ],
     },
+
     {
       id: "men",
       name: "Men",
@@ -475,10 +460,7 @@ const navigation = {
           items: [
             { name: "Tops", href: "#" },
             { name: "Pants", href: "#" },
-            { name: "Sweaters", href: "#" },
             { name: "T-Shirts", href: "#" },
-            { name: "Jackets", href: "#" },
-            { name: "Activewear", href: "#" },
             { name: "Browse All", href: "#" },
           ],
         },
@@ -488,9 +470,6 @@ const navigation = {
           items: [
             { name: "Watches", href: "#" },
             { name: "Wallets", href: "#" },
-            { name: "Bags", href: "#" },
-            { name: "Sunglasses", href: "#" },
-            { name: "Hats", href: "#" },
             { name: "Belts", href: "#" },
           ],
         },
@@ -498,10 +477,8 @@ const navigation = {
           id: "brands",
           name: "Brands",
           items: [
-            { name: "Re-Arranged", href: "#" },
             { name: "Counterfeit", href: "#" },
             { name: "Full Nelson", href: "#" },
-            { name: "My Way", href: "#" },
           ],
         },
       ],

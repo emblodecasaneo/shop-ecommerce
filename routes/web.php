@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\WomenController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -11,6 +12,13 @@ use Illuminate\Support\Facades\Route;
             Route::get('/store', 'store');
 
     });
+
+
+    Route::controller(WomenController::class)->group(function() { 
+
+        Route::get('/women/tops', 'tops');
+
+});
 
 
 
