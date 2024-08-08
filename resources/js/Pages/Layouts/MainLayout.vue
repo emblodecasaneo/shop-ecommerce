@@ -4,7 +4,7 @@
        <slot/> 
     </main>
     <footer>
-        
+        © 2024 Mon Site
     </footer>
 </template>
 

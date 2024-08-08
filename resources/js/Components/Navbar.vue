@@ -216,89 +216,72 @@
                     >
                   </div>
 
-                  <transition
-                    enter-active-class="transition ease-out duration-200"
-                    enter-from-class="opacity-0"
-                    enter-to-class="opacity-100"
-                    leave-active-class="transition ease-in duration-150"
-                    leave-from-class="opacity-100"
-                    leave-to-class="opacity-0"
-                  >
-                    <PopoverPanel
-                      class="absolute inset-x-0 top-full text-sm text-gray-500"
-                    >
-                      <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
-                      <div
-                        class="absolute inset-0 top-1/2 bg-white shadow"
-                        aria-hidden="true"
-                      />
+                  <PopoverPanel class="absolute inset-x-0 top-full text-sm text-gray-500">
+                    <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
+                    <div
+                      class="absolute inset-0 top-1/2 bg-white shadow"
+                      aria-hidden="true"
+                    />
 
-                      <div class="relative bg-white">
-                        <div class="mx-auto max-w-7xl px-8">
-                          <div class="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
-                            <div class="col-start-2 grid grid-cols-2 gap-x-8">
-                              <div
-                                v-for="item in category.featured"
-                                :key="item.name"
-                                class="group relative text-base sm:text-sm"
-                              >
-                                <div
-                                  class="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75"
-                                >
-                                  <img
-                                    :src="item.imageSrc"
-                                    :alt="item.imageAlt"
-                                    class="object-cover object-center"
-                                  />
-                                </div>
-                                <a
-                                  :href="item.href"
-                                  class="mt-6 block font-medium text-gray-900"
-                                >
-                                  <span
-                                    class="absolute inset-0 z-10"
-                                    aria-hidden="true"
-                                  />
-                                  {{ item.name }}
-                                </a>
-                                <p aria-hidden="true" class="mt-1">Shop now</p>
-                              </div>
-                            </div>
+                    <div class="relative bg-blue-100 z-10">
+                      <div class="mx-auto max-w-7xl px-8">
+                        <div class="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
+                          <div class="col-start-2 grid grid-cols-2 gap-x-8">
                             <div
-                              class="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm"
+                              v-for="item in category.featured"
+                              :key="item.name"
+                              class="group relative text-base sm:text-sm"
                             >
                               <div
-                                v-for="section in category.sections"
-                                :key="section.name"
+                                class="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75"
                               >
-                                <p
-                                  :id="`${section.name}-heading`"
-                                  class="font-medium text-gray-900"
-                                >
-                                  {{ section.name }}
-                                </p>
-                                <ul
-                                  role="list"
-                                  :aria-labelledby="`${section.name}-heading`"
-                                  class="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
-                                >
-                                  <li
-                                    v-for="item in section.items"
-                                    :key="item.name"
-                                    class="flex"
-                                  >
-                                    <a :href="item.href" class="hover:text-gray-800">{{
-                                      item.name
-                                    }}</a>
-                                  </li>
-                                </ul>
+                                <img
+                                  :src="item.imageSrc"
+                                  :alt="item.imageAlt"
+                                  class="object-cover object-center"
+                                />
                               </div>
+                              <a
+                                :href="item.href"
+                                class="mt-6 block font-medium text-gray-900"
+                              >
+                                <span class="absolute inset-0 z-10" aria-hidden="true" />
+                                {{ item.name }}
+                              </a>
+                              <p aria-hidden="true" class="mt-1">Shop now</p>
+                            </div>
+                          </div>
+                          <div
+                            class="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm"
+                          >
+                            <div v-for="section in category.sections" :key="section.name">
+                              <p
+                                :id="`${section.name}-heading`"
+                                class="font-medium text-justify text-gray-900"
+                              >
+                                {{ section.name }}
+                              </p>
+                              <ul
+                                role="list"
+                                :aria-labelledby="`${section.name}-heading`"
+                                class="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
+                              >
+                                <li
+                                  v-for="item in section.items"
+                                  :key="item.name"
+                                  class="flex"
+                                >
+                                  <a :href="item.href" class="hover:text-gray-800">{{
+                                    item.name
+                                  }}</a>
+                                </li>
+                              </ul>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </PopoverPanel>
-                  </transition>
+                    </div>
+                  </PopoverPanel>
                 </Popover>
 
                 <a
@@ -406,10 +389,10 @@ const navigation = {
           id: "clothing",
           name: "Clothing",
           items: [
-            { name: "Tops", href: "women/tops" },
-            { name: "Pants", href: "#" },
-            { name: "T-Shirts", href: "#" },
-            { name: "Browse All", href: "#" },
+            { name: "Tops", href: "/women/tops" },
+            { name: "Pants", href: "/women/pants" },
+            { name: "T-Shirts", href: "/women/t-shirts" },
+            { name: "Browse All", href: "/women/all" },
           ],
         },
         {

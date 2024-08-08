@@ -1,5 +1,5 @@
 <template>
-  <MainLayout>rryrryr </MainLayout>
+  <MainLayout></MainLayout>
 </template>
 
 <script setup>

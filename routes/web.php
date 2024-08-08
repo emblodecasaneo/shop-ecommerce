@@ -15,9 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 
     Route::controller(WomenController::class)->group(function() { 
-
         Route::get('/women/tops', 'tops');
-
+        Route::get('/women/all', 'all');
+        Route::get('/women/pants', 'pants');
+        Route::get('/women/t-shirts', 't_shirts');
 });
 
 
