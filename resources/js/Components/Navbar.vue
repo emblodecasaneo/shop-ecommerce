@@ -13,7 +13,7 @@
   ```
 -->
 <template>
-  <div class="bg-white">
+  <div class="bg-white ">
     <!-- Mobile menu -->
     <TransitionRoot as="template" :show="open">
       <Dialog class="relative z-40 lg:hidden" @close="open = false">
@@ -173,9 +173,9 @@
       </Dialog>
     </TransitionRoot>
 
-    <header class="relative bg-white">
+    <header class="relative bg-white shadow-sm shadow-gray-200">
       <nav aria-label="Top" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="border-b border-gray-200">
+        <div class=" border-gray-200">
           <div class="flex h-16 items-center">
             <button
               type="button"

@@ -22,7 +22,6 @@ class ProductController extends Controller
 
     function details($id) {
         $product = db_article::find($id);
-
-        return json_encode($product);
+        return Inertia::render('Products/OverView', ['product'=> $product]);
     }
 }
