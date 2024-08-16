@@ -10,7 +10,7 @@ class db_article extends Model
     use HasFactory;
 
 
-    protected $fillable = ['name', 'description', 'price', 'image', 'marque_id', 'genre_id', 'categorie_id', 'section_id'];
+    protected $fillable = ['name', 'description', 'price', 'image', 'brand_id', 'genre_id', 'categorie_id', 'section_id'];
 
     public function marque()
     {

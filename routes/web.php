@@ -8,8 +8,10 @@ use Illuminate\Support\Facades\Route;
 
     Route::controller(ProductController::class)->group(function() { 
 
-            Route::get('/', 'view');
+            Route::get('/', 'store');
             Route::get('/store', 'store');
+
+            route::get('/detail/{id}', 'details');
 
     });
 

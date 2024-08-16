@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\db_article;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -13,6 +14,15 @@ class ProductController extends Controller
 
 
     function store(){
-        return Inertia::render('Customers/ProductList' );
+
+        $allProduct = db_article::all();
+
+        return Inertia::render('Customers/ProductList' , ['products' => $allProduct]);
+    }
+
+    function details($id) {
+        $product = db_article::find($id);
+
+        return json_encode($product);
     }
 }
